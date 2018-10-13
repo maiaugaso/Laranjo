@@ -1,0 +1,10 @@
+@function blinds($open: 0) {
+  @return linear-gradient(90deg, #f90 $open*100%, #444 0);
+}
+
+html {
+  background: blinds() 50%/ 5em;
+  animation: blinds 1s ease-in-out infinite alternate;
+}
+
+@keyframes blinds { to { background-image: blinds(1) } }
